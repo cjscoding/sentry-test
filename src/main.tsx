@@ -10,6 +10,7 @@ Sentry.init({
   dsn: "https://7c1c58df341938606c27dc591b68882c@o4508199426129920.ingest.us.sentry.io/4508227122429952",
   release: version,
   integrations: [
+    Sentry.rewriteFramesIntegration(),
     Sentry.browserTracingIntegration(),
     Sentry.replayIntegration(),
   ],
